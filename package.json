@@ -1,0 +1,43 @@
+{
+  "name": "hot-typescript",
+  "version": "0.0.1",
+  "license": "dunno",
+  "scripts": {
+    "lint": "tslint --project .",
+    "lint-fix": "tslint --project . --fix",
+    "start": "webpack-dev-server --mode development --hot",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@types/history": "^4.7.2",
+    "@types/node": "^11.13.4",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.2",
+    "history": "^4.9.0",
+    "linqts": "^1.12.2",
+    "mobx": "^5.9.4",
+    "mobx-logger": "^0.7.1",
+    "mobx-react": "^5.4.3",
+    "mobx-react-router": "^4.0.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.3",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.15.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.4.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.7.1",
+    "react-test-renderer": "^16.8.6"
+  }
+}
