@@ -19,6 +19,8 @@ interface IProps {
 
 @observer
 class ItemComponent extends React.Component<IProps> {
+  step = this.props.start;
+
   @computed get newValues() {
     return this.props.data.filter((d) => d[this.props.labels[this.props.start]] === this.props.val);
   }
@@ -33,7 +35,7 @@ class ItemComponent extends React.Component<IProps> {
   }
 
   renderRest = () => {
-    return <ItemContainer data={this.newValues} start={this.props.start + 1} />;
+    return <ItemContainer data={this.newValues} start={this.step + 1} />;
   }
 
   renderContent = () => {
@@ -46,7 +48,7 @@ class ItemComponent extends React.Component<IProps> {
     console.log(this.props);
     return (
       <ItemWrap width={(this.props.start * 100).toString()}>
-        <ItemTitlle onClick={this.props.handleOpen}>{this.props.val}</ItemTitlle>
+        <ItemTitlle>{this.props.val}</ItemTitlle>
 
         {this.endOfRender ?
           this.renderContent() :

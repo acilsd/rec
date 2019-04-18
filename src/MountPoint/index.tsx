@@ -11,12 +11,13 @@ import { data } from '../data';
 
 @observer
 class MountPoint extends React.Component<any> {
-  // not working yet
   @observable selectedLabel: number = 0;
-  private labels = ['color', 'mood', 'size', 'shape', 'material'];
+  @observable labels = ['color', 'mood', 'size', 'shape', 'material'];
 
   @action.bound setFilter(key: number) {
-    //  const newLabels = this.labels.filter((l) => l !== this.labels[key]);
+    // const newLabels = this.labels.filter((l) => l !== this.labels[key]);
+    // console.log(this.labels);
+
     this.selectedLabel = key;
   }
 
@@ -37,7 +38,7 @@ class MountPoint extends React.Component<any> {
         {this.renderLabels()}
         <ItemContainer
           data={data}
-          start={0}
+          start={this.selectedLabel}
         />
       </Wrapper>
     );
